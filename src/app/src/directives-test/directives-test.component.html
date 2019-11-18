@@ -1,0 +1,54 @@
+<p>directives-test works!</p>
+
+<!--<ul>-->
+<!--  <li *ngFor="let fruit of iterableArr ">-->
+<!--    {{fruit}}-->
+<!--  </li>-->
+<!--</ul>-->
+
+
+<app-fruit-item *ngFor="let fruit of iterableArr"
+                [fruit]="fruit"
+></app-fruit-item>
+
+<div [ngSwitch]="switchVar">
+  <p *ngSwitchCase="'a'">
+    This is case 1
+  </p>
+  <p *ngSwitchCase="'b'">
+    This is case 2
+  </p>
+  <p *ngSwitchCase="'c'">
+    This is case 3
+  </p>
+  <p *ngSwitchDefault>
+    this is case 4</p>
+</div>
+
+<p [ngClass]="{'makeMeRed': toggleTheDiv}">
+  I am red
+</p>
+
+<p [ngStyle]="{'backgroundColor': 'blue'}">
+  A blue background for me
+</p>
+
+<p appHighlight> Highlight me please</p>
+
+<!--<div class="" *ngIf="toggleTheDiv; else ElseTemplate" >-->
+<!--  <p>Hi I Am dynamic</p>-->
+
+<!--</div>-->
+
+<!--<ng-template [ngIf]="toggleTheDiv">-->
+<!--  <div>-->
+<!--    <p>ajdhkj</p>-->
+<!--  </div>-->
+<!--</ng-template>-->
+
+<!--<ng-template #ElseTemplate>-->
+<!--  <div>-->
+<!--    <p>I am now rendered</p>-->
+<!--  </div>-->
+<!--</ng-template>-->
+

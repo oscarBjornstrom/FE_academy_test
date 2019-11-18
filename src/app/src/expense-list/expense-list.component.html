@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor="let expense of expenseList">
+    <div>
+      <p>{{expense.name}}</p>
+      <span>{{expense.cost | currency: 'SEK'}}</span>
+
+    </div>
+  </li>
+</ul>
+
